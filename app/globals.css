@@ -1,4 +1,14 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global tweaks */
+:root { color-scheme: light; }
+html, body { height: 100%; }
+body { @apply bg-brand-bg text-brand font-sans antialiased; }
+
+/* Reusables */
+.container { @apply max-w-6xl mx-auto px-4; }
+.card { @apply border border-gray-200 rounded-2xl p-6 bg-white; }
+.badge { @apply text-xs border border-gray-300 rounded-full px-2 py-0.5; }
+.btn { @apply inline-flex items-center gap-2 px-4 py-2 rounded-full border border-black hover:bg-black hover:text-white transition; }
